@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dgrove.rpgassistant">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.AccountActivities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Activities.AccountActivities.CreateUserActivity"
+            android:parentActivityName=".Activities.AccountActivities.LoginActivity" />
+
+        <activity
+            android:name=".Activities.GameActivities.GameListActivity"
+            android:parentActivityName=".Activities.AccountActivities.LoginActivity" />
+
+        <activity android:name=".Activities.CharacterActivities.CharacterListActivity"
+            android:parentActivityName=".Activities.GameActivities.GameMenuActivity" />
+
+        <activity android:name=".Activities.SkillActivities.SkillListActivity"
+            android:parentActivityName=".Activities.SkillActivities.SkillListActivity" />
+
+        <activity android:name=".Activities.CharacterActivities.CharacterInfoActivity"
+            android:parentActivityName=".Activities.CharacterActivities.CharacterMenuActivity"/>
+
+        <activity android:name=".Activities.CharacterActivities.CharacterMenuActivity"
+            android:parentActivityName=".Activities.CharacterActivities.CharacterListActivity"/>
+
+        <activity android:name=".Activities.CharacterActivities.NewCharacterActivity"
+            android:parentActivityName=".Activities.CharacterActivities.CharacterListActivity"/>
+
+        <activity android:name=".Activities.CharacterActivities.CharacterStoryActivity"
+            android:parentActivityName=".Activities.CharacterActivities.CharacterMenuActivity"/>
+
+        <activity android:name=".Activities.GameActivities.GameMenuActivity"
+            android:parentActivityName=".Activities.GameActivities.GameListActivity"/>
+
+        <activity android:name=".Activities.GameActivities.GameStoryActivity"
+            android:parentActivityName=".Activities.GameActivities.GameMenuActivity"/>
+
+        <activity android:name=".Activities.GameActivities.CreateJoinGameActivity"
+            android:parentActivityName=".Activities.GameActivities.GameListActivity"/>
+
+        <activity android:name=".Activities.InventoryActivities.PlayerCharacterTradeListActivity"
+            android:parentActivityName=".Activities.PlayerActions.PlayerActionsActivity"/>
+
+        <activity android:name=".Activities.InventoryActivities.TradeOfferActivity"
+            android:parentActivityName=".Activities.InventoryActivities.PlayerCharacterTradeListActivity"/>
+
+        <activity android:name=".Activities.SettingActivities.GameOptionsActivity"
+            android:parentActivityName=".Activities.SettingActivities.GamesOwnedListActivity"/>
+
+        <activity android:name=".Activities.SettingActivities.GamesOwnedListActivity"
+            android:parentActivityName=".Activities.SettingActivities.SettingsMenuActivity"/>
+
+        <activity android:name=".Activities.SettingActivities.NotificationMenuActivity"
+            android:parentActivityName=".Activities.SettingActivities.SettingsMenuActivity"/>
+
+        <activity android:name=".Activities.SettingActivities.SettingsMenuActivity"
+            android:parentActivityName=".Activities.GameActivities.GameMenuActivity"/>
+
+        <activity android:name=".Activities.SettingActivities.ThemeMenuActivity"
+            android:parentActivityName=".Activities.SettingActivities.SettingsMenuActivity"/>
+
+        <activity android:name=".Activities.PlayerActions.PlayerActionsActivity"
+            android:parentActivityName=".Activities.GameActivities.GameMenuActivity"/>
+
+        <activity android:name=".Activities.SkillActivities.NewSkillActivity"
+            android:parentActivityName=".Activities.SkillActivities.SkillListActivity"/>
+
+    </application>
+
+</manifest>
